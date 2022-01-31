@@ -21,7 +21,7 @@ function Title(props) {
 }
 
 export default function PaginaInicial() {
-  const [username, setUsername] = React.useState("sthallysson");
+  const [username, setUsername] = React.useState("");
   const roteamento = useRouter();
 
   return (
@@ -62,8 +62,8 @@ export default function PaginaInicial() {
             as="form"
             onSubmit={function (event) {
               event.preventDefault();
-              console.log("Eviado com sucesso");
-              roteamento.push("/chat");
+              //console.log("Eviado com sucesso");
+              roteamento.push(`/chat?username=${username}`);
             }}
             styleSheet={{
               display: "flex",
@@ -88,9 +88,8 @@ export default function PaginaInicial() {
 
             <TextField
               placeholder="github user"
-              value={username}
               onChange={function (event) {
-                console.log("usuario digitou", event.target.value);
+                //console.log("usuario digitou", event.target.value);
 
                 //valor
                 const valor = event.target.value;

@@ -24,6 +24,13 @@ function GlobalStyle() {
       #__next > * {
         flex: 1;
       }
+      ul::-webkit-scrollbar {
+        width: 5px;
+      }
+      ul::-webkit-scrollbar-thumb {
+        background-color: #606060;
+        border-radius: 10px;
+      }
       /* ./App fit Height */
     `}</style>
   );
